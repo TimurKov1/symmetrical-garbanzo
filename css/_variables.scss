@@ -1,13 +1,21 @@
 @mixin breakpoint($point) {
-    @if $point == hd {
+    @if $point == fhd {
+        @media (max-width:1600px) {@content;}
+    }
+
+    @else if $point == qhd {
+        @media (max-width:1440px) {@content;}
+    }
+
+    @else if $point == hd {
         @media (max-width:1200px) {@content;}
     }
 
-    @if $point == elg {
+    @else if $point == elg {
         @media (max-width:1024px) {@content;}
     }
 
-    @if $point == md {
+    @else if $point == md {
         @media (max-width:992px) {@content;}
     }
 
@@ -29,6 +37,6 @@
 }
 
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
     
 }

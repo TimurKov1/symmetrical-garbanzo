@@ -8,4 +8,3 @@ $(function () {
 		$('.menu-burger').toggleClass('show-menu')
 	})
 });
-
